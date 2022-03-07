@@ -1,0 +1,623 @@
+@media (min-width:801px){
+
+.mobile{
+    display: none;
+}
+
+body{
+    background-color: rgba(38, 44, 58, 1);
+    color: white;
+    font-family: 'Red Hat Mono', monospace;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#firma{
+   position: relative;
+   bottom: 1px;
+   left: 20%;
+}
+.github{
+    width: 15px;
+    height: 15px;
+    padding: 6px;
+}
+.git{
+    padding: 3px;
+    display: flex;
+    margin: 5px;
+    margin-left: 15px;
+    position: relative;
+    bottom: 9px;
+    left: 20%;
+}
+#pie{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 5%;
+    font-size: 10px;
+    width: 60%;
+    height: 5%;
+    padding: 5px;
+    background-color:rgba(38, 44, 58, 1) ;
+}
+#filpor{
+    width: 500px;
+    height: 550px;
+    position: absolute;
+    bottom: 0;
+    left: 820px;
+}
+.flecha{
+    width: 75px;
+    height: 70px; 
+    position: fixed;
+    left: 30px;
+    top: 10px;
+    cursor: pointer;
+}
+.saque{
+    position: absolute;
+    top: 10%;
+    left: 14%;
+    text-align: left;
+    font-size: large;
+    font-size: 23px;
+   
+}
+.h2{
+    position:relative;
+    left: 3%;
+    font-size: 35px;
+}
+
+.botones{
+    width: 17%;
+    height: 9%; 
+    background-image: url(rickandmorty/fondoboton.jpg);
+    border-radius: 30px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgba(240, 239, 239, 0.2);
+    font-size: 27px;
+    font-family: 'Red Hat Mono', monospace;
+    font-weight: bold;
+}
+button:hover{
+    background-image: url(rickandmorty/fondobotonhover.png);
+    cursor: pointer;
+}
+#personajes{
+    position: absolute;
+    top: 65%;
+    right: 60%;
+}
+#dimensiones{
+    position: absolute;
+    top: 75%;
+    right: 45%;
+}
+.pasaporte{
+    width: 165px;
+    height: 215px; 
+    
+}
+.foto{
+    width: 165px;
+    height: 215px; 
+    border-radius: 10px;
+    border: 1px solid rgb(97, 182, 66);
+    
+}
+.nombres{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    width: 140px;
+    height: 15px;
+    color: white;
+   
+}
+
+#all{            /*Posicicon de los resultados de la busqueda*/ 
+    position: absolute;
+    top: 250px;
+    left: 10px;                
+    display: flex;
+    flex-wrap: wrap;
+    width: 780px;
+    margin-bottom: 10%;
+   
+
+}
+.conte{     /*Tamaño y caracteristicas de cada uno de los resultados*/
+    text-align: center;     /*Este codigo de HTML se encuentra en JS*/
+    font-size: 20px;
+    padding: 70px;          
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 5px;
+    margin-bottom: 130px;
+    cursor: pointer;
+   
+}
+.conte div{     /*Aqui comienza el codigo para hacer que las tarjetas giren al hacer hover*/
+    position: absolute;    /*Este codigo de HTML se encuentra en JS*/
+    backface-visibility: hidden; 
+}
+
+.conte .frente{
+    transform: perspective(500px) rotateY(0deg);    /*Este codigo de HTML se encuentra en JS*/
+}
+.conte .atras{
+   transform: perspective(500px) rotateY(180deg);   /*Este codigo de HTML se encuentra en JS*/
+
+}
+.conte:hover .frente{       /*Este codigo de HTML se encuentra en JS*/
+    transform: perspective(500px) rotateY(180deg);  /*Le digo que al pasa el curso esta girara */
+}                                                   /*180 grados mas de los ya declarados anteriormente*/
+.conte:hover .atras{        /*Este codigo de HTML se encuentra en JS*/
+    transform: perspective(500px) rotateY(360deg);
+}  
+                                                /*Aqui termina el codigo para girar las tarjetas*/
+
+#bus{
+    width: 530px;
+    height: 550px;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    left: 835px;
+}
+#busper{
+    position: absolute;
+    left: 230px;
+    top: 85px;
+    font-size: 35px;
+}
+#popu{
+    position: absolute;
+    left: 170px;
+    top: 250px;
+    font-size: 25px;
+}
+#modales{
+    position: fixed;
+    top: 250px;
+    left: 10px;
+}
+.contmodal{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+
+}
+.contmodal:target{
+    visibility: visible;
+    opacity: 1;
+}
+.modal{
+    background-image: url(rickandmorty/fondopasaporte.png) ;
+    background-size: cover;
+    width: 515px;
+    height: 280px;
+    border-radius: 5px;
+    top: 50%;
+    left: 35%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+  
+}
+
+.fotomodal{
+    width: 140px;
+    height: 195px;
+    position: relative;
+    left: 35px;
+    top: 42px;
+}
+.cerrar{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    position: relative;
+    left: 320px;
+    top:-148px;
+    cursor: pointer;
+}
+.datos{
+    position:absolute;
+    top:10px;
+    left: 190px;
+}
+.moletras{
+    color: black;
+    font-size: 17px;
+    position: relative;
+    top: 27px;
+    left: 4px;
+
+}
+
+input{
+    width: 350px;
+    height: 45px; 
+    position: absolute;
+    left: 315px;
+    top: 190px;
+    box-shadow: 2px 2px 2px 2px rgba(240, 239, 239, 0.2);
+    border: none;
+    font-size: 18px;
+    font-family: 'Red Hat Mono', monospace;
+    border-radius: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1.5px solid rgb(97, 182, 66);
+
+}
+textarea:focus, input:focus {
+    outline: none; 
+    border: 2.5px solid rgb(97, 182, 66);
+  }
+#lupa{
+    width: 48px;
+    height: 46px; 
+    position: absolute;
+    left: 660px;
+    top: 189px;
+    background-image: url(rickandmorty/fondoboton.jpg);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(240, 239, 239, 0.2);
+    border: none;
+
+}
+.lupa{
+    width: 27px;
+    height: 27px; 
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+
+.casa{
+    width: 55px;
+    height: 55px;
+    position: fixed;
+    right: 50px;
+    top: 30px;
+    cursor: pointer;
+}
+#boton1{
+    position: absolute;
+    top: 490px;
+    left: 550px;
+}
+#rickInicio{
+    width: 28%;
+    height: 85%;
+    position: fixed;
+    bottom: 0;
+    left: 65%;
+}
+#letrasInicio{
+    position: absolute;
+    left: 12%;
+    top: 7%;
+    width: 47%;
+    height: 32%;
+}
+.terri{
+    position: absolute;
+    left: 20%;
+    top: 45%;
+    width: 40%;
+    height: 20%;
+    font-size: 25px;
+}
+.terricola{
+    position: absolute;
+    left: 17%;
+    top: 54%;
+    width: 35%;
+    height: 20%;
+    font-size: 25px;
+    text-align: center;
+}
+#comencemos{
+    position: absolute;
+    left: 40%;
+    top: 75%;
+}
+
+}
+@media (max-width:800px){    /*CODIGO MOBILE*/
+
+    .desktop{
+        display: none;
+    }
+    #nombre{
+        display: none;
+    }
+    
+    body{
+        background-color: rgba(38, 44, 58, 1);
+        color: white;
+        font-family: 'Red Hat Mono', monospace;
+        font-weight: bold;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .botones{
+        width: 45%;
+        height: 7%; 
+        background-image: url(rickandmorty/fondoboton.jpg);
+        border-radius: 20px;
+        border: none;
+        box-shadow: 2px 2px 2px 2px rgba(240, 239, 239, 0.2);
+        font-size: 23px;
+        font-family: 'Red Hat Mono', monospace;
+        font-weight: bold;
+        top: 77%;
+    }
+    #comencemos{
+        position: absolute;
+        left: 25%;
+        top: 77%;
+    }
+    #logoinicio{
+        width: 80%;
+        position: absolute;
+        top: 11%;
+        left: 11%;
+    }
+    .terri{
+        position: absolute;
+        left: 13%;
+        top: 56%;
+        width: 80%;
+        font-size: 19px;
+    }
+    .terricola{
+        position: absolute;
+        left: 37px;
+        top: 63%;
+        width: 300px;
+        font-size: 19px;
+        text-align: center;
+    }
+    .flecha{
+        width: 15%;
+        position: fixed;
+        left: 3%;
+        top: 2%;
+     }
+    .casa{
+        width: 10%;
+        position: fixed;
+        right: 5%;
+        top: 3%;
+     }
+     #logo{
+         width: 60%;
+         position: absolute;
+         left: 25%;
+         top: 9%
+     }
+     #busper1{
+        position: absolute;
+        left: 4%;
+        top: 42%;
+        width: 100%;
+        font-size: 22px;
+        text-align: center;
+    }
+    input{
+        width: 60%;
+        height: 5%;
+        position: absolute;
+        left: 19%;
+        top: 55%;
+        box-shadow: 2px 2px 2px 2px rgba(240, 239, 239, 0.2);
+        border: none;
+        font-size: 16px;
+        font-family: 'Red Hat Mono', monospace;
+        border-radius: 5px;
+        padding-left: 3%;
+        padding-right: 3%;
+        border: 1.5px solid rgb(97, 182, 66);
+    
+    }
+    textarea:focus, input:focus {
+        outline: none; 
+        border: 2.5px solid rgb(97, 182, 66);
+      }
+    #lupa{
+        width: 9%;
+        height: 5%; 
+        position: absolute;
+        left: 78%;
+        top: 55%;
+        background-image: url(rickandmorty/fondoboton.jpg);
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px 2px rgba(240, 239, 239, 0.2);
+        border: none;
+    
+    }
+    .lupa{
+        width: 75%; 
+        position: absolute;
+        top: 10%;
+        left: 11%;
+    }
+    #popu{
+         position: absolute;
+         left: 12%;
+         top: 61%;
+         font-size: 17px;
+         text-align: center;
+         width: 80%;
+         
+     }
+     #all{ /*Posicicon de los resultados de la busqueda*/ 
+        position: absolute;
+        top: 69%;
+        left: 7%;   
+        padding: 1%;             
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+     
+    }
+    .conte{ /*Tamaño y caracteristicas de cada uno de los resultados*/
+        text-align: center;     /*Este codigo de HTML se encuentra en JS*/
+        width: 50%;
+        font-size: 13px;
+        margin-bottom: 2%;
+        
+     }
+    .pasaporte{
+        width: 70%;
+    }
+    .nombres{
+        margin: 0;
+        padding: 0;
+        color: white;
+       
+    }
+    .foto{
+        display: none;
+        width: 40%;
+        border-radius: 10px;
+        border: 1px solid rgb(97, 182, 66);
+        
+    }                                           
+    #pie{
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        font-size: 10px;
+        width: 100%;
+        height: 5%;
+        padding: 5px;
+        background-color:rgba(38, 44, 58, 1) ;
+     }
+     #firma{
+        position: absolute;
+        bottom: 12%;
+        
+     }
+     .github{
+         width: 15px;
+         height: 15px;
+         padding: 6px;
+     }
+     .git{
+         padding: 3px;
+         display: flex;
+         position: relative;
+         bottom: 1%;
+         left: 13%;
+    }
+    #modales{
+        position: fixed;
+        top: 5%;
+        left: 5%;
+    }
+    .contmodal{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        z-index: 9999;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 600ms;
+    
+    }
+    .contmodal:target{
+        visibility: visible;
+        opacity: 1;
+    }
+    .modal{
+        background-image: url(rickandmorty/fondopasaporte.png) ;
+        background-size: cover;
+        width: 80%;
+        height: 80%;
+        border-radius: 5px;
+        top: 52%;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+      
+    }
+    .fotomodal{
+        width: 55%;
+        height: 38%;
+        position: relative;
+        left: 22%;
+        top: 5%;
+        
+    }
+   
+    .datos{
+        position:absolute;
+        top: 39%;
+        left: 15%;
+    }
+    .moletras{
+        color: black;
+        font-size: 20px;
+        position: relative;
+        top: 27px;
+        left: 4px;
+    
+    }
+    #cerrar{
+        width: 45%;
+        height: 10%;
+        position: absolute;
+        top: 98%;
+        left: 19%;
+        background-image: url(rickandmorty/fondoboton.jpg);
+        border-radius: 20px;
+        border: none;
+        box-shadow: 2px 2px 2px 2px rgba(43, 42, 42, 0.2);
+        font-size: 18px;
+        font-family: 'Red Hat Mono', monospace;
+        font-weight: bold;
+    
+    }
+    .saque{
+        position: absolute;
+        top: 44%;
+        left: 6%;
+        text-align: center;
+        font-size: 13px;
+        line-height: 16px;
+      
+       
+    }
+    #logo1{
+        width: 60%;
+        position: absolute;
+        left: 20%;
+        top: 9%
+    }
+      
+    #personajes{
+        position: absolute;
+        top: 72%;
+        right: 29%;
+       
+    }   
+
+}
